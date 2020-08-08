@@ -8,3 +8,4 @@ services:
       - /splash/node_modules
     ports:
       - '8000:8000'
+    container_name: gatsby_dev
