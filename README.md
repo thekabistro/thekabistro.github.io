@@ -1,12 +1,30 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Landing Page
+
+### Quickstart
+
+Basic gatsby template, included docker containers for easy start
+
+```
+docker-compose up -d
+```
+
+### 🔮 Linting
+
+ESlint, Prettier, and Stylelint are setup for all linting purposes:
+
+```bash
+npm run lint
+```
+
+To automatically format all code files:
+
+```bash
+npm run format
+npm run format:css
+```
+
+Shamelessly taken from https://github.com/kremalicious/portfolio
+
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 

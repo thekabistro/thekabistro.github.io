@@ -19,7 +19,18 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "prettier": "2.0.5",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-graphql": "^4.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-testing-library": "^3.4.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.1.2"
   },
   "keywords": [
     "gatsby"
@@ -29,11 +40,14 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "develop-lan":  "gatsby develop -H 0.0.0.0 -p 8000",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss}\"",
     "start": "npm run develop-lan",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint:js": "eslint ./gatsby-*.js && eslint ./src/**/*.{js,jsx}",
+    "lint:css": "stylelint ./src/**/*.{css,scss}",
+    "lint": "npm run lint:js && npm run lint:css"
   },
   "repository": {
     "type": "git",
