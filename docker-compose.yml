@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dev:
+    build: .
+    command: npm start
+    volumes:
+      - .:/splash
+      - /splash/node_modules
+    ports:
+      - '8000:8000'
+    container_name: gatsby_dev
