@@ -1,0 +1,41 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+}
+
+.items {
+  background: var(--transparent-bg);
+  padding: 3em;
+}
+.footer {
+  bottom: 0%;
+  position: fixed;
+  text-align: center;
+}
+
+.re-particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.items a {
+  border: 1px solid #3f72af;
+  border-radius: 5px;
+  padding: 0.5em;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+.items a:hover {
+  background-color: var(--accent-color);
+  color: var(--main-bg-color);
+  padding: 0.65em 0.75em;
+}

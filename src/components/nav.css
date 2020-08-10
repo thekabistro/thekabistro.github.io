@@ -1,0 +1,38 @@
+.navbar {
+  padding: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+}
+
+.navbar a {
+  float: right;
+  text-decoration: none;
+}
+
+.title {
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--inverted-color);
+}
+
+.nav-item:hover {
+  background-color: var(--secondary-bg-color);
+}
+
+.nav-item {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0px 0px;
+  width: 150px;
+  transition: all 0.3s ease 0s;
+  text-align: right;
+  padding: 0.5em;
+}
+
+.dropdown a {
+  padding: 0.5em;
+  transition: all 0.3s ease 0s;
+}
+.dropdown a:hover {
+  background-color: var(--main-bg-color);
+  padding: 0.75em 1em;
+}
