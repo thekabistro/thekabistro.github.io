@@ -1,1 +1,1 @@
-{"data":{"allMarkdownRemark":{"edges":[{"node":{"fields":{"slug":"/about/contact/","category":"about"},"frontmatter":{"title":"Contact"}}},{"node":{"fields":{"slug":"/post1/contact/","category":"post1"},"frontmatter":{"title":"New Reads"}}},{"node":{"fields":{"slug":"/post1/contact2/","category":"post1"},"frontmatter":{"title":"Pos Ohte!"}}}]}}}
+{"data":{"allMarkdownRemark":{"edges":[{"node":{"fields":{"slug":"/about/contact/","category":"about"},"frontmatter":{"title":"Contact"}}}]}}}
