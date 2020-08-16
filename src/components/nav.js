@@ -2,10 +2,10 @@ import { graphql, StaticQuery, Link } from 'gatsby'
 import React, { useState } from 'react'
 import './nav.css'
 
-function organizedPagesByCategory(allMarkdownRemark) {
+function organizedPagesByCategory(combinedData) {
   const pagesByCategory = {}
   // Iterate over all articles
-  allMarkdownRemark.edges.forEach(({ node }) => {
+  combinedData.forEach(({ node }) => {
     const categoryKey = node.fields.category
 
     if (!pagesByCategory[categoryKey]) pagesByCategory[categoryKey] = []
@@ -61,11 +61,24 @@ const Nav = () => (
             }
           }
         }
+        allMdx {
+          edges {
+            node {
+              fields {
+                slug
+                category
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
       }
     `}
     render={(data) => {
-      const pagesByCategory = organizedPagesByCategory(data.allMarkdownRemark)
-      console.log(pagesByCategory)
+      let combinedData = data.allMarkdownRemark.edges.concat(data.allMdx.edges)
+      const pagesByCategory = organizedPagesByCategory(combinedData)
       return (
         <nav className="navbar">
           {Object.keys(pagesByCategory).map((category) => (
@@ -82,7 +95,5 @@ const Nav = () => (
     }}
   ></StaticQuery>
 )
-
-
 
 export default Nav
