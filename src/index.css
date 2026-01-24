@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=EB+Garamond:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=EB+Garamond:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -58,17 +58,17 @@ h1 {
   font-size: 2.5rem;
   color: #1f2937;
   margin-bottom: 0.25rem;
-  font-weight: 600;
-  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.1;
 }
 
 .title {
   color: #6b7280;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 2px;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .contact-section {
