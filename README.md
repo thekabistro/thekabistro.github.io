@@ -29,18 +29,23 @@ The built files will be in the `dist/` directory.
 
 This project uses GitHub Actions to automatically build and deploy to GitHub Pages on every push to the `main` branch.
 
-**Important Setup Steps:**
+**How it works:**
+
+1. The workflow builds the Vite project
+2. Uploads the build artifacts using official GitHub Actions
+3. Deploys directly to GitHub Pages (no gh-pages branch needed)
+
+**Repository Settings:**
 
 1. Go to your repository **Settings → Pages**
 2. Under "Build and deployment":
-   - **Source**: Select "GitHub Actions" (NOT "Deploy from a branch")
-3. Push to the `main` branch to trigger automatic deployment
-4. Your site will be live at `https://[username].github.io/[repo-name]`
+   - **Source**: Select **"GitHub Actions"** (NOT "Deploy from a branch")
+3. Your site will be live at `https://kabirkuriyan.com` (or `https://[username].github.io/[repo-name]`)
 
 The workflow runs automatically and includes:
 - Building the Vite project
-- Running tests and checks
-- Deploying to GitHub Pages
+- Uploading build artifacts
+- Deploying to GitHub Pages using official actions only
 
 ### Pull Request Automation
 
