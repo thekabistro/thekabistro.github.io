@@ -1,30 +1,60 @@
 # Personal Splash Page
 
-This repo contains my personal website, [kabirkuryian.com](https://kabirkuriyan.com).  
+This repo contains my personal website, [kabirkuryian.com](https://kabirkuriyan.com).
 
-Create content by placing markdown files under a /content/ top level directory.  Gatsby will read these and automatically generate pages for each.  Each directory under content will be a top level navigation bar category, with dropdowns for the files under it. 
+A simple, elegant React profile page built with Vite, featuring automatic deployment to GitHub Pages.
 
-### Quickstart
+## 🚀 Getting Started
 
-```
-docker-compose up -d
-```
+### Development
 
-```
-docker exec gatsby-dev [command]
-```
-
-### 💫 Deploy
-
-This will deploy to github pages.  Note: change the CNAME in /public/CNAME to reflect custom domains.
-
-```
-npm run deploy
+```bash
+npm install
+npm run dev
 ```
 
-### 🔮 Linting
+The site will be available at `http://localhost:5173`
 
-ESlint, Prettier, and Stylelint are setup for all linting purposes:
+### Build
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist/` directory.
+
+## 💫 Deployment
+
+### Automatic Deployment with GitHub Actions
+
+This project uses GitHub Actions to automatically build and deploy to GitHub Pages on every push to the `main` branch.
+
+**Important Setup Steps:**
+
+1. Go to your repository **Settings → Pages**
+2. Under "Build and deployment":
+   - **Source**: Select "GitHub Actions" (NOT "Deploy from a branch")
+3. Push to the `main` branch to trigger automatic deployment
+4. Your site will be live at `https://[username].github.io/[repo-name]`
+
+The workflow runs automatically and includes:
+- Building the Vite project
+- Running tests and checks
+- Deploying to GitHub Pages
+
+### Pull Request Automation
+
+Every pull request automatically runs:
+- Dependency installation
+- Linting checks
+- Build verification
+- Output validation
+
+This ensures all changes are tested before merging to `main`.
+
+## 🔮 Code Quality
+
+ESLint, Prettier, and Stylelint are configured for code quality:
 
 ```bash
 npm run lint
@@ -37,38 +67,51 @@ npm run format
 npm run format:css
 ```
 
+## 📁 Project Structure
 
-## 🧐 What's inside?
+```
+.
+├── .github/
+│   └── workflows/     # GitHub Actions CI/CD workflows
+├── src/
+│   ├── App.jsx       # Main React component
+│   ├── main.jsx      # App entry point
+│   └── index.css     # Global styles
+├── index.html        # HTML template
+├── vite.config.js    # Vite configuration
+├── package.json
+└── README.md
+```
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+## 🛠️ Tech Stack
 
-    .
-    ├── node_modules
-    ├── content
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    ├── Dockerfile
-    ├── docker-compose.yml
-    └── README.md
+- **React** - UI library
+- **Vite** - Build tool and dev server
+- **GitHub Actions** - CI/CD automation
+- **GitHub Pages** - Hosting
 
-### Code Structure
+## 📝 Workflows
 
-src/.
-    ├── components
-    ├── pages
-    ├── templates
+### CI Workflow (`ci.yml`)
+Runs on every pull request:
+- Installs dependencies
+- Runs linting
+- Builds the project
+- Validates build output
 
-Each page has an associated .css file, if needed. Most pages are based off the layout.js file.  
+### Deploy Workflow (`deploy.yml`)
+Runs on every push to `main`:
+- Builds the project
+- Deploys to GitHub Pages
 
-### Inspiration 
+## 🤝 Contributing
+
+1. Create a feature branch
+2. Make your changes
+3. Open a pull request (CI will run automatically)
+4. Once approved and merged, deployment happens automatically
+
+## Inspiration
 
 Some code taken from https://github.com/kremalicious/portfolio, particularly the linter config.  
 
