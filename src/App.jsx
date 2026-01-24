@@ -1,6 +1,78 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function App() {
+  useEffect(() => {
+    if (window.particlesJS) {
+      window.particlesJS('particles-js', {
+        particles: {
+          number: {
+            value: 100,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          color: {
+            value: '#3f72af'
+          },
+          shape: {
+            type: 'circle'
+          },
+          opacity: {
+            value: 0.5,
+            random: false
+          },
+          size: {
+            value: 6,
+            random: true
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: '#dbe2ef',
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: 'none',
+            random: false,
+            straight: false,
+            out_mode: 'out',
+            bounce: false
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: {
+              enable: true,
+              mode: 'bubble'
+            },
+            onclick: {
+              enable: true,
+              mode: 'repulse'
+            }
+          },
+          modes: {
+            bubble: {
+              distance: 250,
+              size: 0,
+              duration: 2,
+              opacity: 0
+            },
+            repulse: {
+              distance: 400,
+              duration: 4
+            }
+          }
+        },
+        retina_detect: true
+      });
+    }
+  }, []);
+
   return (
     <div className="app">
       <div className="business-card">

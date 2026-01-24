@@ -12,6 +12,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 .app {
   min-height: 100vh;
   background-color: #f9f7f7;
@@ -19,15 +28,20 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  position: relative;
 }
 
 .business-card {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
   border-radius: 6px;
   padding: 2rem 2rem;
   max-width: 500px;
   width: 100%;
   border: 2px solid #d1d5db;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .header {
